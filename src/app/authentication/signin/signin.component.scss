@@ -1,0 +1,94 @@
+.form-controls{
+    width: 300px;
+    height: 400px;
+    background: orange;
+    margin: 5% auto;
+
+    .control{
+        margin-top: 20px;
+    }
+
+
+    form{
+        width: 300px;
+        height: 400px;
+        background: rgb(5, 64, 21);
+        border-bottom-right-radius: 80%;
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            // margin-top: 20px;
+        }
+        label{
+            font-size: 20px;
+            padding-left: 30px;
+            color: white;
+        }
+        input{
+            margin-left: 30px;
+            padding-left: 10px;
+            border: none;
+            outline: none;
+            padding: 6px;
+            width: 75%;
+            border-radius: 5px;
+        }
+
+        
+        .button{
+           
+            .button-container{
+                width: 80%;
+                display: flex; 
+                justify-content: space-between;
+                margin: 30px ;
+            
+                p{
+                    width: 100%;
+                    color: white;
+                   }
+                   .btn{
+                     padding: 6px;
+                     border: none;
+                     outline: none;
+                     font-size: 15px;
+                     border-radius: 4px;
+                     margin-top: 10px;
+
+                     a{
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover{
+                            color: white;
+                        }
+                     }
+                   }
+                   .button-one{
+                    button{
+                        cursor: pointer;
+                        margin-top: 60px;
+                        transition: 1s ease-in-out;
+                        &:hover{
+                            background:rgba(255, 149, 0, 0.702) ;
+                            color: white;
+                        }
+                    }
+                   }
+                   .button-two{
+                    margin-left: 70px;
+
+                    button{
+                        margin-left: 40px;
+                        transition: 1s ease-in-out;
+                        &:hover{
+                            background: rgba(26, 97, 45, 0.819);
+                        }
+                    }
+                   }
+            }
+           
+        }
+    }
+}

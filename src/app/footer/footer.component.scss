@@ -1,0 +1,26 @@
+.footerContainer{
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0px;
+   
+    
+    p{
+        padding-top: 5px;
+        color: white;
+    }
+}
+@media (max-width: 576px) {
+    .footerContainer{
+        text-align: center;
+        font-size: 20px;
+        position: fixed;
+        bottom: 0px;
+       
+        
+        p{
+            padding-top: 5px;
+            color: white;
+        }
+    }
+}

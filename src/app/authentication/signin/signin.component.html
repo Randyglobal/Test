@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<section class="form">
+    <div class="form-controls">
+    <form action="" method="post">
+    <h1>LogIn</h1>
+
+        <div class="form-control control">
+            <label for="">Username</label><br>
+            <input type="text" name="name" [(ngModel)] = 'user.username'>
+        </div>
+        <div class="form-control">
+            <label for="">Password</label><br>
+            <input type="password" name="Password" [(ngModel)] = 'user.password'>
+        </div>
+        <div class="button">
+            <div class="button-container">
+            <div class="button-one">
+            <button class="btn" (click)="toggle()">Submit</button>
+            </div>
+            <div class="button-two">
+            <p>Do not have an account?</p>
+            <button class="btn" (click)="toggle()"><a routerLink="/signup">SignUp</a></button>
+           </div>
+        </div>
+        </div>
+    </form>
+    </div>
+</section>

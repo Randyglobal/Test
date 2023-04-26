@@ -3,16 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SigninComponent } from './authentication/signin/signin.component';
+import { SignupComponent } from './authentication/signup/signup.component';
+import { LogoutComponent } from './authentication/logout/logout.component';
+import { MainComponent } from './main/main.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from './service/user.service';
+import { LocalstoreService } from './service/localstore.service';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SigninComponent,
+    SignupComponent,
+    LogoutComponent,
+    MainComponent,
+    NavBarComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserService, LocalstoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
