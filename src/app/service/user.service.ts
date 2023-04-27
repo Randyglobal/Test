@@ -22,7 +22,7 @@ export class UserService {
       if (user['username'] == userObject['username'] && user['password'] == userObject['password'] ) {
         alert('Successfully Login,' + userObject.username);
 
-        window.location.replace('');
+        // window.location.replace('');
         return;
       }else{
         continue
@@ -40,11 +40,14 @@ export class UserService {
     for(const objectUsers of setToStorage.data){
       if (user['username'] == objectUsers['username'] || user['email'] == objectUsers['email']) {
         alert('Sorry, account already exist');
+        // window.location.replace('');
         return;
       }else{
         continue
       }
     }
+    // let arrLength: number = setToStorage.data.length;
+    // let lastUser = setToStorage[arrLength - 1]
   }
     storeLocally.push(user);
     this.LocalStore.set('User', storeLocally);

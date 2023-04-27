@@ -14,6 +14,8 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './service/user.service';
 import { LocalstoreService } from './service/localstore.service';
+import { TaskListComponent } from './task/task-list/task-list.component';
+import { AddTaskComponent } from './task/add-task/add-task.component';
 
 
 
@@ -28,6 +30,8 @@ import { LocalstoreService } from './service/localstore.service';
     MainComponent,
     NavBarComponent,
     NavComponent,
+    TaskListComponent,
+    AddTaskComponent,
   ],
   imports: [
     BrowserModule,

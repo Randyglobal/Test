@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+
+<section class="add-task">
+    <form action="" method="post">
+        <div class="form-control">
+            <label for="">Name</label><br>
+            <input type="text" name="name" [(ngModel)]="tasks.Name" [ngModelOptions]="{standalone: true}">
+            
+        </div>
+        <div class="form-control">
+            <label for="">Status</label><br>
+            <select name="status" id="" [(ngModel)]="tasks.Status" [ngModelOptions]="{standalone: true}">
+                
+                <option value="">Pending</option>
+                <option value="">Success</option>
+                <option value="">Paused</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="">Difficulty</label><br>
+            <select name="difficulty" id="" [(ngModel)]="tasks.Difficulty" [ngModelOptions]="{standalone: true}">
+                
+                <option value="">Very Hard</option>
+                <option value="">Medium</option>
+                <option value="">Easy</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="level">Level</label><br>
+            <select name="" id="" [(ngModel)]="tasks.Level" [ngModelOptions]="{standalone: true}">
+                
+                <option value="">Completed</option>
+                <option value="">Not Completed</option>
+                <option value="">In Progress</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="">TaskId</label><br>
+            <input type="text" name="name" [(ngModel)]="tasks.TaskId" [ngModelOptions]="{standalone: true}">
+            
+        </div>
+        <div class="form-control">
+            <label for="">StartDate</label><br>
+            <input type="date" name="date" [(ngModel)]="tasks.StartDate" [ngModelOptions]="{standalone: true}">
+            
+        </div>
+        <div class="form-control">
+            <label for="">DueDate</label><br>
+            <input type="date" name="date" [(ngModel)]="tasks.DueDate" [ngModelOptions]="{standalone: true}">
+            
+        </div>
+        <div class="btn">
+            <button (click)="saveTask()">Save</button>
+        </div>
+    </form>
+</section>
+

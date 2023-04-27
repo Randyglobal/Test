@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<section class="task-container">
+    <h1>Hello, You can Add Your Task Here</h1>
+    <div class="taskDetails">
+        <button><a routerLink="/addTask">Add Task</a></button>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Difficulty</th>
+            <th>Level</th>
+            <th>TaskId</th>
+            <th>StartDate</th>
+            <th>DueDate</th>
+        </tr>
+        <tr *ngFor="let tasks of tasks; let i = index" [style]="tasks.Status.startsWith('success')? 'background: green; color: white': 'background: red; color: white'">
+            <td>{{i}}</td>
+            <td>{{tasks.Name | titlecase}}</td>
+            <td>{{tasks.Status | uppercase}}</td>
+            <td>{{tasks.Difficulty | titlecase}}</td>
+            <td>{{tasks.Level | uppercase}}</td>
+            <td>{{tasks.TaskId}}</td>
+            <td>{{tasks.StartDate | date: 'd/MM/y'}}</td>
+            <td>{{tasks.DueDate}}</td>
+     </tr>
+    </table>
+
+    </div>
+</section>
