@@ -20,6 +20,7 @@ export class AddTaskComponent {
     TaskId: '',
     StartDate: '',
     DueDate: '',
+    id: 0,
   }
 
   saveTask(){

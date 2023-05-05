@@ -13,6 +13,8 @@
             <th>TaskId</th>
             <th>StartDate</th>
             <th>DueDate</th>
+            <th>Edit</th>
+            <th>Action</th>
         </tr>
         <tr *ngFor="let tasks of tasks; let i = index" [style]="tasks.Status.startsWith('success')? 'background: green; color: white': 'background: red; color: white'">
             <td>{{i}}</td>
@@ -23,7 +25,21 @@
             <td>{{tasks.TaskId}}</td>
             <td>{{tasks.StartDate | date: 'd/MM/y'}}</td>
             <td>{{tasks.DueDate}}</td>
+            <td>{{i}}</td>
+            <td >
+                <button (click)="editTask(i)" style="color: white">
+                    Edit
+                </button>
+                <button (click)="deleteTask(tasks.id)" style="color: white">
+                Delete
+                </button>
+                <button (click)="clear(tasks.id)" style="color: white">Delete Permenently</button>
+
+            </td>
+           
      </tr>
+     <button (click)="Undo()" style="color: white">UNDO Deleted work</button>
+
     </table>
 
     </div>

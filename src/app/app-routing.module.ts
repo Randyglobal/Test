@@ -6,6 +6,8 @@ import { SignupComponent } from './authentication/signup/signup.component';
 import { AppComponent } from './app.component';
 import { AddTaskComponent } from './task/add-task/add-task.component';
 import { TaskListComponent } from './task/task-list/task-list.component';
+import { EditTaskComponent } from './task/edit-task/edit-task.component';
+import { RouterGuard } from './Guard/router.guard';
 
 const routes: Routes = [
   {
@@ -33,6 +35,11 @@ const routes: Routes = [
 {
   path: 'list',
   component: TaskListComponent
+},
+{
+  path: 'edit-task/:id',
+  component: EditTaskComponent,
+  // canActivate: [RouterGuard]
 }
 
 ];

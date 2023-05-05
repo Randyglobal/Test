@@ -7,5 +7,6 @@ export interface Ilist{
     Level: Level;
     TaskId: string | number;
     StartDate: Date | string | number;
-    DueDate: Date | string;
+    DueDate: Date | string | number;
+    id: number
 }

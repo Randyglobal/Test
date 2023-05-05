@@ -44,7 +44,12 @@ export class UserServiceService {
   }
     storeLocally.push(task);
     this.Store.set('Task', storeLocally);
-    alert('Task Added')
+    alert('Task Added');
+    if (this.Store.set('Task', storeLocally) == true) {
+      window.location.replace("http://localhost:62369/list")
+    }
+    console.log(this.Store);
+    //Check Why the status, difficulty, level is not working
     return;
   }
 
@@ -54,4 +59,11 @@ export class UserServiceService {
   getTasks(){
     return this.SecondStore.get('Task')
   }
+  //Delete task
+  deleteTask(id: number){
+    return sessionStorage.removeItem("Task")
+   }
+   permenentDelete(id: number){
+    return localStorage.removeItem("Task")
+   }
 }
